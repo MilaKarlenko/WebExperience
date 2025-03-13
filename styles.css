@@ -1,16 +1,13 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    padding: 0;
+    background: rgb(230,230,230);
+    color: rgb(50,50,50);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 112.5%;
+    line-height: 1.6em;
   }
-  
-  html {
-    box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
+
   .column {
     float: left;
     width: 25%;
@@ -20,7 +17,14 @@ body {
   
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 2px;
+    margin: 4px;
+    max-width: 100%;
+    @media(max-width: 860px) {
+        width: 100%;
+        height:max-content;
+        padding: 4em 0 1em 0;
+        font-size: x-small;
+    }
   }
   
   .about-section {
@@ -31,7 +35,7 @@ body {
   }
   
   .container {
-    padding: 0 16px;
+    padding: 4px 16px 8px 16px;
   }
   
   .container::after, .row::after {
@@ -44,44 +48,13 @@ body {
     color: grey;
   }
   
-  .button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .button:hover {
-    background-color: #555;
-  }
-  
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 100%;
-      display: block;
-    }
-  }
   img.uniform-size {
-    width: 120px;      /* Set desired width */
-    height: 200px;     /* Set desired height */
+    width: 140px;
+    height: 200px;
+    display: block; 
+    margin: 0 auto; 
+    max-width: 100%;
     object-fit: cover; /* Use 'cover' to fill the container, or 'contain' if you prefer the whole image visible */
-}
-
-
-
-body {	
-  margin: 0;
-  padding: 0;
-  background: rgb(230,230,230);
-  color: rgb(50,50,50);
-  font-family: 'Open Sans', sans-serif;
-  font-size: 112.5%;
-  line-height: 1.6em;
 }
 
 .timeline {
